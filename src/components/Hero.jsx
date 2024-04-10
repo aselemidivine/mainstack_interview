@@ -1,26 +1,53 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import "../assets/css/hero.css";
 import Info from "../assets/images/info.svg";
-import Expand from "../assets/images/expand_more.svg";
-import Download from "../assets/images/download.svg";
-import Down_arrow from "../assets/images/down-arrow.svg";
 import Chart from "../assets/images/chart.svg";
 import Product1 from "../assets/images/Product.svg";
 import Product2 from "../assets/images/Product-2.svg";
 import Product3 from "../assets/images/Product-3.svg";
 import Product4 from "../assets/images/Product-4.svg";
+import { HOST_URL } from "../assets/js/help_func";
+import axios from "axios";
 
 const Hero = () => {
+  const [loading, setLoading] = useState(false);
+  const [wallet, setWallet] = useState();
+
+  const GET_WALLET_BALANCE = `${HOST_URL()}/wallet`; // Updated API URL
+
+   // FETCH ALL wallet
+   useEffect(() => {
+    setLoading(true);
+    const fetchData = async () => {
+      try {
+        const response = await axios.get(GET_WALLET_BALANCE);
+        setWallet(response.data);
+        setLoading(false);
+      } catch (error) {
+        console.error("Error:", error);
+        setLoading(false);
+      }
+    };
+
+    fetchData();
+  }, []);
+
+  console.log(wallet);
+
   return (
     <>
       <div className="hero">
+      {loading ? (
+        <p>Loading...</p>
+      ) : (
         <div className="hero__container">
+
           <div className="hero__items">
             <div className="balance">
               <div className="balance__usd">
                 <div>
-                  <p className="available">Available balance</p>
-                  <p className="usd">USD 120,500.00</p>
+                  <p className="available">Available Balance</p>
+                  <p className="usd">USD {wallet?.balance}</p>
                 </div>
                 <div className="project">
                   <button type="button" class="css-kdh3kf">
@@ -57,7 +84,7 @@ const Hero = () => {
                     <img src={Info} alt="" />
                   </div>
                 </div>
-                <p className="usd__ledger">USD 0.00</p>
+                <p className="usd__ledger">USD {wallet?.ledger_balance}</p>
               </div>
               <div>
                 <div className="ledger__balance">
@@ -66,7 +93,7 @@ const Hero = () => {
                     <img src={Info} alt="" />
                   </div>
                 </div>
-                <p className="usd__ledger">USD 55,080.00</p>
+                <p className="usd__ledger">USD {wallet?.total_payout}</p>
               </div>
               <div>
                 <div className="ledger__balance">
@@ -75,20 +102,23 @@ const Hero = () => {
                     <img src={Info} alt="" />
                   </div>
                 </div>
-                <p className="usd__ledger">USD 175,580.00</p>
+                <p className="usd__ledger">USD {wallet?.total_revenue}</p>
               </div>
               <div>
                 <div className="ledger__balance">
-                  <p className="available">Pending payout</p>
+                  <p className="available">Pending Payout</p>
                   <div>
                     <img src={Info} alt="" />
                   </div>
                 </div>
-                <p className="usd__ledger">USD 0.00</p>
+                <p className="usd__ledger">USD {wallet?.pending_payout}</p>
               </div>
             </div>
           </div>
+
         </div>
+      )}
+
       </div>
 
       <div className="side__icons">
@@ -103,101 +133,6 @@ const Hero = () => {
         </div>
         <div className="img__icons">
           <img src={Product4} alt="" />
-        </div>
-      </div>
-      {/* TRANSACTIONS */}
-      <div className="hero__container">
-        <div className="transaction">
-          <div className="transaction__number">
-            <p className="transaction__number--main">23 Transactions</p>
-            <p className="detail">Your transactions for the last 7 days</p>
-          </div>
-          <div className="filter">
-            <div className="user__icon">
-              <span>Filter</span>
-              <img className="filter__items" src={Expand} alt="" />
-            </div>
-            <div className="user__icon">
-              <span>Export list</span>
-              <img className="filter__items" src={Download} alt="" />
-            </div>
-          </div>
-        </div>
-        <div className="transaction__list">
-          <div className="">
-            <div className="transaction__container">
-              <div>
-                <img src={Down_arrow} alt="" />
-              </div>
-              <div>
-                <p className="title">Psychology of Money </p>
-                <p className="author">Roy Hudson</p>
-              </div>
-            </div>
-          </div>
-          <div className="">
-            <div>
-              <p className="price">USD 120</p>
-              <p className="date">Apr 02, 2022</p>
-            </div>
-          </div>
-        </div>
-        <div className="transaction__list">
-          <div className="">
-            <div className="transaction__container">
-              <div>
-                <img src={Down_arrow} alt="" />
-              </div>
-              <div>
-                <p className="title">Psychology of Money </p>
-                <p className="author">Roy Hudson</p>
-              </div>
-            </div>
-          </div>
-          <div className="">
-            <div>
-              <p className="price">USD 120</p>
-              <p className="date">Apr 02, 2022</p>
-            </div>
-          </div>
-        </div>
-        <div className="transaction__list">
-          <div className="">
-            <div className="transaction__container">
-              <div>
-                <img src={Down_arrow} alt="" />
-              </div>
-              <div>
-                <p className="title">Psychology of Money </p>
-                <p className="author">Roy Hudson</p>
-              </div>
-            </div>
-          </div>
-          <div className="">
-            <div>
-              <p className="price">USD 120</p>
-              <p className="date">Apr 02, 2022</p>
-            </div>
-          </div>
-        </div>
-        <div className="transaction__list">
-          <div className="">
-            <div className="transaction__container">
-              <div>
-                <img src={Down_arrow} alt="" />
-              </div>
-              <div>
-                <p className="title">Psychology of Money </p>
-                <p className="author">Roy Hudson</p>
-              </div>
-            </div>
-          </div>
-          <div className="">
-            <div>
-              <p className="price">USD 120</p>
-              <p className="date">Apr 02, 2022</p>
-            </div>
-          </div>
         </div>
       </div>
     </>

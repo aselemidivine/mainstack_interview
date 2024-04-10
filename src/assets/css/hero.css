@@ -6,8 +6,8 @@
 }
 
 .hero__container {
-  min-height: 100vh;
-  max-width: 1160px;
+  min-height: 70vh;
+  max-width: 1110px;
   width: 100%;
   /* padding-bottom: 3.125rem; */
   margin-inline: auto;
@@ -77,14 +77,14 @@
 .ledger__balance {
   display: flex;
   justify-content: space-between;
-  align-items: center;
 }
 .ledger__balance .available {
   font-size: 14px;
   color: #56616b;
+  margin: 0;
 }
 .filter {
-  width: 17%;
+  width: 19%;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -100,7 +100,9 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 220px;
+}
+.transaction_details {
+  margin-left: 20px;
 }
 .transaction__number {
   width: 70%;
@@ -115,7 +117,7 @@
   font-size: 14px;
   color: #56616b;
 }
-.user__icon {
+.filter__icon {
   display: flex;
   padding: 6px;
   padding: 11px;
@@ -212,10 +214,9 @@
 }
 
 .side__icons {
-  display: none;
   flex-direction: column;
   position: fixed;
-  top: 60%;
+  top: 50%;
   left: 1rem;
   background: rgba(255, 255, 255, 0.7);
   box-shadow: rgba(188, 196, 204, 0.2) 0px 16px 32px,

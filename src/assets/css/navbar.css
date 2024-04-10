@@ -100,8 +100,8 @@ ol {
 .user__icon {
     display: flex;
     padding: 6px;
-    padding: 6px;
     justify-content: space-between;
+    width: 67px;
     align-items: center;
     border-radius: 100px;
     background-color: #EFF1F6;

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import Marketing from "../assets/images/widgets.svg";
 import Analytics from "../assets/images/analytics.png";
 import Home from "../assets/images/home.svg";
@@ -9,11 +9,30 @@ import Menu from "../assets/images/menu.svg";
 import Message from "../assets/images/icon.svg";
 import User from "../assets/images/user.svg";
 import "../assets/css/navbar.css";
-// import { HOST_URL } from "../assets/js/help_func";
-
-// const GET_USER_OBJ_URL = `${HOST_URL()}/users/getMyObj`;
+import { HOST_URL } from "../assets/js/help_func";
+import axios from "axios";
 
 function Navbar() {
+  const [user, setUser] = useState();
+
+  const GET_USER_DETAILS = `${HOST_URL()}/user`; // Updated API URL
+
+   // FETCH ALL wallet
+   useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const response = await axios.get(GET_USER_DETAILS);
+        setUser(response.data);
+      } catch (error) {
+        console.error("Error:", error);
+      }
+    };
+
+    fetchData();
+  }, []);
+
+  console.log(user)
+
   return (
     <>
       <header className="header">
