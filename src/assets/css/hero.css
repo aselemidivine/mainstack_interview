@@ -1,0 +1,235 @@
+.hero {
+  display: flex;
+  padding-inline: 3.125rem;
+  /* padding-bottom: 60px; */
+  margin-top: 3rem;
+}
+
+.hero__container {
+  min-height: 100vh;
+  max-width: 1160px;
+  width: 100%;
+  /* padding-bottom: 3.125rem; */
+  margin-inline: auto;
+}
+.hero__items {
+  display: flex;
+  gap: 1.25rem 7.5rem;
+  width: 100%;
+}
+.ledger {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  width: 30%;
+}
+.balance {
+  width: 70%;
+}
+.balance__usd {
+  display: flex;
+  flex-direction: row;
+  -webkit-box-align: center;
+  align-items: center;
+  gap: 0rem 4rem;
+  margin-bottom: 1.875rem;
+}
+.balance__usd .available {
+  font-size: 14px;
+  color: #56616b;
+}
+.project {
+  display: flex;
+  -webkit-box-align: center;
+  align-items: center;
+}
+
+.usd {
+  line-height: 0%;
+  font-size: 2.25rem;
+  font-weight: 700;
+  /* font-family: "Degular Display"; */
+  letter-spacing: 0.1px;
+}
+.usd__ledger {
+  line-height: 0%;
+  font-size: 24px;
+  font-weight: 700;
+  letter-spacing: 0.1px;
+}
+
+.css-kdh3kf {
+  border-radius: 100px;
+  background: #000;
+  color: #fff;
+  font-size: 15px;
+  line-height: 19.91px;
+  font-weight: 600;
+  /* font-family: "Degular Display"; */
+  letter-spacing: 0.1px;
+  height: 48px;
+  width: initial;
+  padding: 14px 28px 14px 28px;
+  margin-right: 10px;
+  opacity: 1;
+}
+
+.ledger__balance {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.ledger__balance .available {
+  font-size: 14px;
+  color: #56616b;
+}
+.filter {
+  width: 17%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.transaction {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid #eff1f6;
+  margin-bottom: 40px;
+}
+.transaction__container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 220px;
+}
+.transaction__number {
+  width: 70%;
+  margin-bottom: 20px;
+}
+.transaction__number--main {
+  font-size: 24px;
+  font-weight: 700;
+  margin-bottom: 0;
+}
+.detail {
+  font-size: 14px;
+  color: #56616b;
+}
+.user__icon {
+  display: flex;
+  padding: 6px;
+  padding: 11px;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 24px;
+  background-color: #eff1f6;
+}
+.filter__items {
+  width: 19px;
+  height: 19px;
+  margin-left: 10px;
+}
+.transaction__list {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.author {
+  font-size: 14px;
+  font-weight: 500;
+  color: #56616b;
+}
+
+.title {
+  font-size: 16px;
+  color: #131316;
+  font-weight: 500;
+}
+.date {
+  font-size: 14px;
+  color: #56616b;
+  font-weight: 500;
+}
+.price {
+  font-size: 16px;
+  color: #131316;
+  font-weight: 700;
+}
+/* .chart {
+  position: relative;
+  cursor: default;
+  width: 728px;
+  height: 100px;
+} */
+.line__1 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  flex-grow: 0;
+  width: 6px;
+  height: 6px;
+  border-radius: 100px;
+  background: #dbdee5;
+}
+.line__3 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  flex-grow: 0;
+  width: 6px;
+  height: 6px;
+  border-radius: 100px;
+  background: #dbdee5;
+}
+.line__2 {
+  width: 100%;
+  height: 1px;
+  background: #dbdee5;
+}
+.date__container {
+  display: flex;
+  -webkit-box-pack: justify;
+  justify-content: space-between;
+  font-size: 0.875rem;
+  line-height: 140%;
+  font-weight: 500;
+  letter-spacing: -0.1px;
+}
+.date__container p {
+  color: #56616b;
+  margin: 5px 0px;
+  font-size: 14px;
+}
+
+.line__flex {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+.side__icons {
+  display: none;
+  flex-direction: column;
+  position: fixed;
+  top: 60%;
+  left: 1rem;
+  background: rgba(255, 255, 255, 0.7);
+  box-shadow: rgba(188, 196, 204, 0.2) 0px 16px 32px,
+    rgba(188, 196, 204, 0.24) 0px 12px 24px 4px;
+  backdrop-filter: blur(8px);
+  padding: 0.25rem;
+  border-radius: 6.25rem;
+  row-gap: 0.5rem;
+}
+.img__icons {
+  display: flex;
+  padding: 0.5rem;
+  background: inherit;
+  cursor: pointer;
+  border-radius: 50%;
+  filter: grayscale(1);
+}

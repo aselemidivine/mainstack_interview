@@ -1,4 +1,4 @@
-import React, { } from "react";
+import React from "react";
 import Marketing from "../assets/images/widgets.svg";
 import Analytics from "../assets/images/analytics.png";
 import Home from "../assets/images/home.svg";
@@ -53,7 +53,11 @@ function Navbar() {
             </ul>
             <div className="menu__items--right">
               <div>
-                <img className="menu__items--img--main" src={Notification} alt="" />
+                <img
+                  className="menu__items--img--main"
+                  src={Notification}
+                  alt=""
+                />
               </div>
               <div>
                 <img className="menu__items--img" src={Message} alt="" />
@@ -61,16 +65,14 @@ function Navbar() {
               <div>
                 <div></div>
                 <div className="user__icon">
-                <img className="menu__items--img--user" src={User} alt="" />
-                <img className="menu__items--img--user" src={Menu} alt="" />
-
+                  <img className="menu__items--img--user" src={User} alt="" />
+                  <img className="menu__items--img--user" src={Menu} alt="" />
                 </div>
               </div>
             </div>
           </nav>
         </div>
       </header>
-      
     </>
   );
 }
