@@ -6,10 +6,16 @@ import Up_arrow from "../assets/images/successful.svg";
 import "../assets/css/hero.css";
 import { HOST_URL } from "../assets/js/help_func";
 import axios from "axios";
+import Filter from "./Filter";
+import { useDisclosure } from "@chakra-ui/react";
 
 const Transactions = () => {
   const [loading, setLoading] = useState(false);
   const [transactions, setTransactions] = useState([]);
+  const [isOpen, setIsOpen] = useState(false);
+
+  const onClose = () => setIsOpen(false);
+  const onOpen = () => setIsOpen(true);
 
   const GET_ALL_TRANSACTIONS = `${HOST_URL()}/transactions`; // Updated API URL
 
@@ -31,7 +37,7 @@ const Transactions = () => {
   }, []);
 
   console.log(transactions);
-  
+
   return (
     <div>
       {/* TRANSACTIONS */}
@@ -46,9 +52,10 @@ const Transactions = () => {
             </div>
             <div className="filter">
               <div className="filter__icon">
-                <span>Filter</span>
+              <Filter isOpen={isOpen} onClose={onClose} />
                 <img className="filter__items" src={Expand} alt="" />
               </div>
+
               <div className="filter__icon">
                 <span>Export list</span>
                 <img className="filter__items" src={Download} alt="" />
@@ -60,7 +67,7 @@ const Transactions = () => {
             <div key={transaction.id} className="transaction__list">
               <div className="">
                 <div className="transaction__container">
-                  {!transaction.status === "successful" ? ( 
+                  {transaction.type === "deposit" ? (
                     <div>
                       <img src={Down_arrow} alt="Down Arrow" />
                     </div>

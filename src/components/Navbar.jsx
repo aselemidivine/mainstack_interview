@@ -11,14 +11,20 @@ import User from "../assets/images/user.svg";
 import "../assets/css/navbar.css";
 import { HOST_URL } from "../assets/js/help_func";
 import axios from "axios";
+import DropdownMenu from "./DropdownMenu";
 
 function Navbar() {
   const [user, setUser] = useState();
+  const [isDropdownOpen, setIsDropdownOpen] = useState(false);
 
   const GET_USER_DETAILS = `${HOST_URL()}/user`; // Updated API URL
 
-   // FETCH ALL wallet
-   useEffect(() => {
+  const toggleDropdown = () => {
+    setIsDropdownOpen(!isDropdownOpen);
+  };
+
+  // FETCH ALL wallet
+  useEffect(() => {
     const fetchData = async () => {
       try {
         const response = await axios.get(GET_USER_DETAILS);
@@ -31,25 +37,27 @@ function Navbar() {
     fetchData();
   }, []);
 
-  console.log(user)
+  console.log(user);
 
   return (
     <>
       <header className="header">
         <div className="main-header main">
           <span className="logo__box">
-            <img
-              src="https://res.cloudinary.com/mainstack-co/image/upload/images/app/overhaul/mainstackLogo.svg"
-              alt="logo"
-            />
+            <a href="https://app.mainstack.me/">
+              <img
+                src="https://res.cloudinary.com/mainstack-co/image/upload/images/app/overhaul/mainstackLogo.svg"
+                alt="logo"
+              />
+            </a>
           </span>
 
           <nav className="main-navbar">
             <ul className="navbar__list">
-              <li>
-                <img src={Home} alt="" />
-                Home
-              </li>
+                <li>
+                  <img src={Home} alt="" />
+                  Home
+                </li>
 
               <li>
                 <img src={Analytics} alt="" />
@@ -85,8 +93,16 @@ function Navbar() {
                 <div></div>
                 <div className="user__icon">
                   <img className="menu__items--img--user" src={User} alt="" />
-                  <img className="menu__items--img--user" src={Menu} alt="" />
+                  <img
+                    className="menu__items--img--user"
+                    onClick={toggleDropdown}
+                    src={Menu}
+                    alt=""
+                  />
                 </div>
+                {isDropdownOpen && (
+                  <DropdownMenu user={user} toggleDropdown={toggleDropdown} />
+                )}
               </div>
             </div>
           </nav>
