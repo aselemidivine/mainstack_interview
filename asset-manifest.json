@@ -1,30 +1,30 @@
 {
   "files": {
-    "main.css": "/static/css/main.1b884995.css",
-    "main.js": "/static/js/main.a02a450e.js",
-    "static/media/crm.svg": "/static/media/crm.16d3f87086e895f81554b147d7b87ef0.svg",
-    "static/media/user.svg": "/static/media/user.970cbf7a77f65ea8952d35c197e8c62e.svg",
-    "static/media/widgets.svg": "/static/media/widgets.68d213b2f60a39fe1341b115116f06d5.svg",
-    "static/media/icon.svg": "/static/media/icon.db8560e571d4de7c12ae25b7c11d21a1.svg",
-    "static/media/info.svg": "/static/media/info.618526ccd03b851543b6b040000ca8b4.svg",
-    "static/media/Product.svg": "/static/media/Product.3c5985c7db0c32a0b49538f9b54aef3c.svg",
-    "static/media/home.svg": "/static/media/home.84e540f47305d42c3c970cf72092f9fb.svg",
-    "static/media/Product-3.svg": "/static/media/Product-3.950700df9b527a0c5acbf4af9d32192f.svg",
-    "static/media/notifications.svg": "/static/media/notifications.fefa52812474a065d5cbc6f87aaa093b.svg",
-    "static/media/Product-4.svg": "/static/media/Product-4.3264268b6a236f9acc173631c52d5d6a.svg",
-    "static/media/Product-2.svg": "/static/media/Product-2.68f351c34f29ba2002f933e2ba207453.svg",
-    "static/media/menu.svg": "/static/media/menu.20938b3c5ca0e1c0041a0fa8a64c04e0.svg",
-    "static/media/expand_more.svg": "/static/media/expand_more.e75fd44124c36cccf0406a6d4946d4d2.svg",
-    "static/media/download.svg": "/static/media/download.9902b3a4d200df90e43981cbfbf4e0a2.svg",
-    "index.html": "/index.html",
-    "static/media/successful.svg": "/static/media/successful.066e4579b391e3f136c9c47fb01e2767.svg",
-    "static/media/down-arrow.svg": "/static/media/down-arrow.3e584b0ef93b67f8223a2ceabebfe5c7.svg",
-    "static/media/chart.svg": "/static/media/chart.cf38b0533dc51591263bc755579f4fe6.svg",
-    "main.1b884995.css.map": "/static/css/main.1b884995.css.map",
-    "main.a02a450e.js.map": "/static/js/main.a02a450e.js.map"
+    "main.css": "/mainstack_interview/static/css/main.1b884995.css",
+    "main.js": "/mainstack_interview/static/js/main.de111468.js",
+    "static/media/crm.svg": "/mainstack_interview/static/media/crm.16d3f87086e895f81554b147d7b87ef0.svg",
+    "static/media/user.svg": "/mainstack_interview/static/media/user.970cbf7a77f65ea8952d35c197e8c62e.svg",
+    "static/media/widgets.svg": "/mainstack_interview/static/media/widgets.68d213b2f60a39fe1341b115116f06d5.svg",
+    "static/media/icon.svg": "/mainstack_interview/static/media/icon.db8560e571d4de7c12ae25b7c11d21a1.svg",
+    "static/media/info.svg": "/mainstack_interview/static/media/info.618526ccd03b851543b6b040000ca8b4.svg",
+    "static/media/Product.svg": "/mainstack_interview/static/media/Product.3c5985c7db0c32a0b49538f9b54aef3c.svg",
+    "static/media/home.svg": "/mainstack_interview/static/media/home.84e540f47305d42c3c970cf72092f9fb.svg",
+    "static/media/Product-3.svg": "/mainstack_interview/static/media/Product-3.950700df9b527a0c5acbf4af9d32192f.svg",
+    "static/media/notifications.svg": "/mainstack_interview/static/media/notifications.fefa52812474a065d5cbc6f87aaa093b.svg",
+    "static/media/Product-4.svg": "/mainstack_interview/static/media/Product-4.3264268b6a236f9acc173631c52d5d6a.svg",
+    "static/media/Product-2.svg": "/mainstack_interview/static/media/Product-2.68f351c34f29ba2002f933e2ba207453.svg",
+    "static/media/menu.svg": "/mainstack_interview/static/media/menu.20938b3c5ca0e1c0041a0fa8a64c04e0.svg",
+    "static/media/expand_more.svg": "/mainstack_interview/static/media/expand_more.e75fd44124c36cccf0406a6d4946d4d2.svg",
+    "static/media/download.svg": "/mainstack_interview/static/media/download.9902b3a4d200df90e43981cbfbf4e0a2.svg",
+    "index.html": "/mainstack_interview/index.html",
+    "static/media/successful.svg": "/mainstack_interview/static/media/successful.066e4579b391e3f136c9c47fb01e2767.svg",
+    "static/media/down-arrow.svg": "/mainstack_interview/static/media/down-arrow.3e584b0ef93b67f8223a2ceabebfe5c7.svg",
+    "static/media/chart.svg": "/mainstack_interview/static/media/chart.cf38b0533dc51591263bc755579f4fe6.svg",
+    "main.1b884995.css.map": "/mainstack_interview/static/css/main.1b884995.css.map",
+    "main.de111468.js.map": "/mainstack_interview/static/js/main.de111468.js.map"
   },
   "entrypoints": [
     "static/css/main.1b884995.css",
-    "static/js/main.a02a450e.js"
+    "static/js/main.de111468.js"
   ]
 }
