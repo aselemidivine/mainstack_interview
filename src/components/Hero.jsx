@@ -95,7 +95,7 @@ const Hero = () => {
                 </div>
                 <p className="usd__ledger">USD {wallet?.total_payout}</p>
               </div>
-              <div>
+              <div >
                 <div className="ledger__balance">
                   <p className="available">Total Revenue</p>
                   <div>

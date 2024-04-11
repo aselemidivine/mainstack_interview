@@ -6,8 +6,8 @@ import Up_arrow from "../assets/images/successful.svg";
 import "../assets/css/hero.css";
 import { HOST_URL } from "../assets/js/help_func";
 import axios from "axios";
-import Filter from "./Filter";
-import { useDisclosure } from "@chakra-ui/react";
+// import Filter from "./Filter";
+// import { useDisclosure } from "@chakra-ui/react";
 
 const Transactions = () => {
   const [loading, setLoading] = useState(false);
@@ -52,7 +52,7 @@ const Transactions = () => {
             </div>
             <div className="filter">
               <div className="filter__icon">
-              <Filter isOpen={isOpen} onClose={onClose} />
+                <span className="filter__items">Filter</span>
                 <img className="filter__items" src={Expand} alt="" />
               </div>
 
